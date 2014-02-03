@@ -1,4 +1,1 @@
-Lodging
-=======
-
-Basic, simple lodging website focused on painless search for availability
+Mock lodging site that is easy & painless
