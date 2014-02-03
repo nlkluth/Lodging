@@ -12,12 +12,7 @@ module.exports = View.extend({
       this.renderContent(route);
     }, this);
     var Header = require('./main/header'),
-      Link = require('models/link');
-    var links = new Link.Collection();
-    links.initializeHeaderLinks();
-    var header = new Header({
-      collection: links
-    });
+      header = new Header({});
     this.setView('header', header, true);
   },
   renderContent: function(ContentView) {
