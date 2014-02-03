@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "from": "import-style.less.hbs",
+      "to": "app/views/styles/index.less",
+      "method": "append"
+    },
+    {
+      "from": "style.less.hbs",
+      "to": "app/views/styles/_{{name}}.less"
+    }
+  ]
+}

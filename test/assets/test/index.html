@@ -1,0 +1,34 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="styles/test.css" />
+</head>
+<body>
+  <div id="mocha"></div>
+  <!-- Live Reload -->
+  <script>
+    window.brunch = window.brunch || {};
+    window.brunch['auto-reload'] = {enabled: true};
+  </script>
+
+  <script src="../scripts/vendor.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="scripts/vendor.js"></script>
+  <script>
+    mocha.setup({
+      ui: 'bdd',
+      ignoreLeaks: true
+    });
+    var expect = chai.expect;
+    var should = chai.should();
+  </script>
+  <script src="scripts/test.js"></script>
+  <script>
+    var testHelper = require('test/test-helpers');
+    testHelper.init();
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); };
+  </script>
+</body>
+</html>
