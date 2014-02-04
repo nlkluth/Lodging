@@ -12,8 +12,12 @@ module.exports = View.extend({
       this.renderContent(route);
     }, this);
     var Header = require('./main/header'),
-      header = new Header({});
+      Search = require('./search'),
+      header = new Header({}),
+      search = new Search({});
+
     this.setView('header', header, true);
+    this.setView('#search', search, true);
   },
   renderContent: function(ContentView) {
     ContentView = ContentView || require('./main/index');
