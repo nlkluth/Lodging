@@ -1,7 +1,8 @@
-var View, template;
+var View, template, SearchModel;
 
 View = require('./view').View;
 template = require('./templates/main-layout');
+SearchModel = require('models/search');
 
 module.exports = View.extend({
   template: template,
@@ -14,7 +15,7 @@ module.exports = View.extend({
     var Header = require('./main/header'),
       Search = require('./search'),
       header = new Header({}),
-      search = new Search({});
+      search = new Search({model: new SearchModel()});
 
     this.setView('header', header, true);
     this.setView('#search', search, true);

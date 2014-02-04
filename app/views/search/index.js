@@ -10,9 +10,13 @@ module.exports = View.extend({
     submit: 'submitSearch'
   },
 
+  serialize: function() {
+    return this.model.toJSON();
+  },
+
   submitSearch: function(e) {
     e.preventDefault();
-    var arrivalDate = this.$('.arrival-date').val();
-    var departureDate = this.$('.departure-date').val();
+    var arrivalDate = this.$('.arrival').val();
+    var departureDate = this.$('.departure').val();
   }
 });
