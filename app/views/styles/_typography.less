@@ -2,10 +2,8 @@
 /* Headlines */
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: @baseLineHeight / 2;
-  margin-right: 0;
-  margin-left: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: (@baseLineHeight / 6) 5px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: @baseLineHeight;
   color: @textColor;
@@ -19,15 +17,15 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: #4183C4;
+  color: @textColor;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
 h1, h2, h3 {
-  line-height: @baseLineHeight * 2;
+  line-height: @baseLineHeight * 1.7;
 }
 h1 {
   font-size: @baseFontSize * 2.75; /* ~38px */
@@ -50,7 +48,7 @@ h6 {
 
 /* Paragraph */
 p {
-  margin: 0 0 (@baseLineHeight / 2);
+  margin: (@baseLineHeight / 6) 0;
 }
 
 /* Unordered and Ordered lists */
@@ -58,7 +56,7 @@ ul,
 ol {
   padding: 0;
   margin: 0 0 (@baseLineHeight / 2) 25px;
-  list-style-type: disc;
+  list-style: none;
 }
 ul ul,
 ul ol,
@@ -69,3 +67,4 @@ ol ul {
 li {
   line-height: @baseLineHeight;
 }
+
