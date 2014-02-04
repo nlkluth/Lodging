@@ -4,5 +4,13 @@ View = require('../view').View;
 template = require('./templates/index');
 
 module.exports = View.extend({
-  template: template
+  template: template,
+
+  events: {
+    submit: 'submitSearch'
+  },
+
+  submitSearch: function() {
+    // set search model.
+  }
 });
