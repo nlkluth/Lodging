@@ -10,7 +10,9 @@ module.exports = View.extend({
     submit: 'submitSearch'
   },
 
-  submitSearch: function() {
-    // set search model.
+  submitSearch: function(e) {
+    e.preventDefault();
+    var arrivalDate = this.$('.arrival-date').val();
+    var departureDate = this.$('.departure-date').val();
   }
 });
