@@ -1,14 +1,17 @@
 @import "app/views/styles/_main";
 
 header {
-  .container();
+  .container-fluid();
+  margin-bottom: 20px;
+  
   #header {
     .make-row();
     .logo {
-      .make-lg-column(5);
+      .make-xs-column(4);
     }
     .links {
-      .make-lg-column(7);
+      .make-xs-column(7);
+      text-align: right;
       li {
         display: inline;
       }
