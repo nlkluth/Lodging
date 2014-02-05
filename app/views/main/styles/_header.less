@@ -1,1 +1,17 @@
-header {}
+@import "app/views/styles/_main";
+
+header {
+  .container();
+  #header {
+    .make-row();
+    .logo {
+      .make-lg-column(5);
+    }
+    .links {
+      .make-lg-column(7);
+      li {
+        display: inline;
+      }
+    }
+  }
+}
