@@ -13,7 +13,7 @@ module.exports = Base.View.extend({
   initialize: function() {
     this.setView('.selection', new Base.ListView({
       listItemView: List,
-      collection: new Locations()
+      collection: Locations
     }));
   }
 });
