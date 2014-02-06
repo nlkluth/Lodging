@@ -1,15 +1,21 @@
 @import "app/views/styles/_main";
 
 header {
-  .container-fluid();
+  .container();
   margin-bottom: 20px;
   
   #header {
     .make-row();
     .logo {
+      .make-lg-column(4);
+      .make-md-column(4);
+      .make-sm-column(4);
       .make-xs-column(4);
     }
     .links {
+      .make-lg-column(7);
+      .make-md-column(7);   //TODO: replace with navbar
+      .make-sm-column(7);
       .make-xs-column(7);
       text-align: right;
       li {
