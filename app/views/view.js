@@ -44,8 +44,31 @@ var View = Backbone.Layout.extend({
   }
 });
 
+var ListView = View.extend({
+  tagName: 'ul',
+
+  constructor: function(options) {
+    // Have Backbone set up this View.
+    View.call(this, options);
+    this.listItemView = options.listItemView || this.listItemView;
+    this.itemViewOptions = options.itemViewOptions;
+    this.collection.on('reset, sync', function() {
+      if (this.collection.length > 0) {
+        this.addItemViews().render();
+      }
+    }, this);
+    this.addItemViews();
+  },
+
+  addItemViews: function() {
+    this.iterateOverList(this.listItemView);
+    return this;
+  }
+});
+
 // we specificially export a View so we can set up type specific views i.e
 // list view, region view, etc
 module.exports = {
-  View: View
+  View: View,
+  ListView: ListView
 };
