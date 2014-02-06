@@ -1,9 +1,16 @@
-var Model, Collection, Location = {};
+var Model, Collection;
 
-Location.Model = Model.extend({});
+Model = require('./model');
+Collection = require('./collection');
 
-Location.Collection = Collection.extend({
-  model: Location.Collection
+Model = Model.extend({
+  defaults: {
+    name: '',
+    location: '',
+    address: ''
+  }
 });
 
-module.exports = Location;
+module.exports = Collection.extend({
+  model: Model
+});

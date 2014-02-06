@@ -1,8 +1,23 @@
-var View, template;
+var Base, templates, List, Locations;
 
-View = require('../view').View;
-template = require('./templates/index');
+Base = require('../view');
+Locations = require('models/location');
+templates = {
+  main: require('./templates/index'),
+  list: require('./templates/list')
+};
 
-module.exports = View.extend({
-  template: template
+module.exports = Base.View.extend({
+  template: templates.main,
+
+  initialize: function() {
+    this.setView('.selection', new Base.ListView({
+      listItemView: List,
+      collection: new Locations()
+    }));
+  }
+});
+
+List = Base.View.extend({
+  template: templates.list
 });
