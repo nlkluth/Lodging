@@ -1,25 +1,25 @@
+@import "app/views/styles/_main";
+
 header {
-  .column(16);
-  background: #4276b6;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  .container();
+  margin-bottom: 20px;
+  
   #header {
-    margin: 0 auto;
-    width: 500px;
-    .clearfix();
+    .make-row();
     .logo {
-      width: 460px;
+      .make-lg-column(4);
+      .make-md-column(4);
+      .make-sm-column(4);
+      .make-xs-column(4);
     }
-    a {
-      color: #fff;
-    }
-    ul {
-      margin: 10px 38px;
-      list-style-type: none;
-      .clearfix();
+    .links {
+      .make-lg-column(7);
+      .make-md-column(7);   //TODO: replace with navbar
+      .make-sm-column(7);
+      .make-xs-column(7);
+      text-align: right;
       li {
-        float: left;
-        margin-right: 36px;
-        font-size: 16px;
+        display: inline;
       }
     }
   }

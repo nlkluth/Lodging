@@ -21,7 +21,8 @@ function renderRegion(region, properties) {
 module.exports = Backbone.Router.extend({
   routes: {
     '': 'index',
-    'docs': 'docs'
+    'docs': 'docs',
+    'location/:id': 'location'
   },
 
   index: function() {
@@ -29,5 +30,9 @@ module.exports = Backbone.Router.extend({
   },
   docs: function() {
     renderRegion(require('views/main/docs'));
+  },
+
+  location: function(locationId) {
+    renderRegion(require('views/location/index'), {location: locationId});
   }
 });
