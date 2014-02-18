@@ -45,8 +45,6 @@ var View = Backbone.Layout.extend({
 });
 
 var ListView = View.extend({
-  tagName: 'ul',
-
   constructor: function(options) {
     // Have Backbone set up this View.
     View.call(this, options);

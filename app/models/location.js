@@ -6,12 +6,12 @@ Collection = require('./collection');
 Locations.Model = Model.extend({});
 
 Locations.Collection = Collection.extend({
-  model: Model
+  model: Locations.Model
 });
 
-var song1 = new Locations.Model({ name: 'Location One', Type: 'Cabin' });
-var song2 = new Locations.Model({ name: 'Location Two', Type: 'Chalet' });
-var song3 = new Locations.Model({ name: 'Location Three', Type: 'Condo' });
+var location1 = new Locations.Model({ name: 'Location One', type: 'Cabin' });
+var location2 = new Locations.Model({ name: 'Location Two', type: 'Chalet' });
+var location3 = new Locations.Model({ name: 'Location Three', type: 'Condo' });
 
-var locations = new Locations.Collection([ song1, song2, song3]);
+var locations = new Locations.Collection([ location1, location2, location3]);
 module.exports = locations;

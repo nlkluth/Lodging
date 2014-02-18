@@ -12,6 +12,7 @@ module.exports = Base.View.extend({
 
   initialize: function() {
     this.setView('.selection', new Base.ListView({
+      className: 'row',
       listItemView: List,
       collection: Locations
     }));
