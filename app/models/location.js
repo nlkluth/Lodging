@@ -6,7 +6,7 @@ Collection = require('./collection');
 Locations.Model = Model.extend({});
 
 Locations.Collection = Collection.extend({
-  model: Model
+  model: Locations.Model
 });
 
 var location1 = new Locations.Model({ name: 'Location One', type: 'Cabin' });
